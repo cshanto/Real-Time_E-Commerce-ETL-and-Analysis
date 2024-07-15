@@ -1,1 +1,50 @@
+Problem Statement
+In the world of e-commerce, consumers often struggle to compare prices among multiple sources or marketplaces in order to obtain the best deal. This is a project which tries to solve this issue and thus helps the consumer in comparing the price of similar products listed on Amazon or Flipkart. Prices and product listings are updated quite often on e-commerce platforms, but it is difficult for shoppers to keep a tab of them manually. The Project: This project automates the process of Extraction, Transformation and Loading (ETL) which is a better approach to aggregating all or some product prices across Amazon IN/US or Flipkart over time to save time and effort of consumers. The intention is to offer a single page visualization which permits the simple and fast verification of prices, allowing customers to make fast and more intelligent choices for their bucket lists.
+
+Objectives of the Project
+Automatic ETL pipeline: 
+a) Develop an end-to-end (Amazon and Flipkart to AWS PostgreSQL database) product data processing solution using Python / SQL, which Extracts the Product Data from Amazon as well as Flipkart, transforms it for consistency and cleanses this Data and Loads them into PostgreSQL database whose instance is hosted in AWS cloud service.
+b) Implements robust Extraction-Transformation-and Loading Process.
+Real-time data processing: 
+Make use of AWS services (Lamba and Kinesis) to process the real time data extraction, transformation and loading in order keep updating the database with latest product information.
+Actionable Insights: 
+Conduct Exploratory Data Analysis (EDA) along with Graphical visualizations comparing the product’s minimum and maximum prices data across Amazon, Flipkart, and even combination of both datasets helps to generate insights for consumers.
+
+
+
+
+Research Methodology
+This project multi-step process methodology involves data Extraction, Transformation and Load processing flow. Here is a detailed breakdown:
+Phase 1: Data Extraction
+Web Scraping: Write web scrapers with BeautifulSoup and requests in Python to scrape product information from Amazon and Flipkart marketplace. These scrapers will be pointed at particular product pages, and they shall get some details like Product name, Price etc.
+Data Storage: Store the scraped data into CSV files, then load it in AWS PostgreSQL database.
+Phase 2: Data Transformation
+Data Cleaning: Scrub and normalize the scraped data to fix incorrect formats, remove any NaN(Null) values or duplicates, convert currency rates into region specific value, and change datatypes. Creating a level playing field between product names, as well prices were formatted into the same unit.
+Data Enrichment: Enhance the dataset with metadata such as extraction timestamp and source platform for ease of later analysis.
+Phase 3: Data Loading
+Database Design PostgresSchema for Amazon and Flipkart Products tables. Design relational schema with appropriate columns and data types required for storing your product information. Create Data Model view of the tables.
+Insert Data: Create SQL Scripts to insert the cleansed and transformed data into corresponding database tables. Automate this process with Python's SQLAlchemy library, and psycopg2 library.
+Phase 4: Real-Time Data Processing
+AWS Lambda: Run ETL scripts as AWS Lambda functions in order to carry out Extraction, Transformation and Loading processes automatically. Schedule Lambda to run in specific intervals or events.
+AWS Kinesis Data Stream: Configure the Kinesis data streams to manage streaming source and make database update in real time. Now I would build kinesis as stream and link this to lambda for processing of incoming data streams.
+
+
+
+
+Phase 5: Analyse and Visualize the Data
+Interactive Data Exploration (IDE): For IDE, interrogate data using SQL to create explorations into average prices and price distributions which might be common in one platform versus another.
+Creating Visual Reports: Data visualization in Microsoft Power BI, using python libraries like Matplotlib and Seaborn. Create pie charts to compare market share, and bar graphs that show minimum and maximum price of a product from both markets.
+Phase 6: Analysis & Reporting
+Generating Reports: Create SQL views and queries to generate end-to-end comparison reports of product prices. Use python scripts to generate a report automatically.
+Generating Dashboard: Create Microsoft Power BI dashboard for quick insights of the datasets. 
+
+Limitations
+In conclusion, web scraping is not the best solution for collecting e-commerce data at scale since:
+•	It can be considered copyright infringement.
+•	Potential bans from some platforms.
+•	Data becomes inconsistent faster due to constant changes in website structure or blocking of content by most electronics shops.
+•	Frequent proxy blockage by robot detection system from the target websites.
+•	Utilizing AWS services such as Lambda, Kinesis, and RDS can incur significant costs, especially as data volume and processing needs scale.
+Latency or Data Loss in Real-Time Process: While making use of AWS Lambda and Kinesis to carry out real-time data processing, there may be high chances that the latency increases during peak traffic periods.
+Scalability: Initial version may suffer from scalability issues, as the product increases amount of data. The ETL pipeline and the database it relies on must be optimized for large-scale data managing is crucial.
 
