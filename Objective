@@ -1,6 +1,10 @@
 Problem Statement
 In the world of e-commerce, consumers often struggle to compare prices among multiple sources or marketplaces in order to obtain the best deal. 
-This is a project which tries to solve this issue and thus helps the consumer in comparing the price of similar products listed on Amazon or Flipkart. Prices and product listings are updated quite often on e-commerce platforms, but it is difficult for shoppers to keep a tab of them manually. The Project: This project automates the process of Extraction, Transformation and Loading (ETL) which is a better approach to aggregating all or some product prices across Amazon IN/US or Flipkart over time to save time and effort of consumers. The intention is to offer a single page visualization which permits the simple and fast verification of prices, allowing customers to make fast and more intelligent choices for their bucket lists.
+This is a project which tries to solve this issue and thus helps the consumer in comparing the price of similar products listed on Amazon or Flipkart. 
+Prices and product listings are updated quite often on e-commerce platforms, but it is difficult for shoppers to keep a tab of them manually. 
+The Project: This project automates the process of Extraction, Transformation and Loading (ETL) which is a better approach to aggregating 
+all or some product prices across Amazon IN/US or Flipkart over time to save time and effort of consumers. The intention is to offer a single page 
+visualization which permits the simple and fast verification of prices, allowing customers to make fast and more intelligent choices for their bucket lists.
 
 Objectives of the Project
 Automatic ETL pipeline: 
